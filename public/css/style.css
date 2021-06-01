@@ -1,0 +1,125 @@
+body {
+  margin-left: 00px;
+  margin-top: 00px;
+  margin-right: 00px;
+  margin-bottom: 00px;
+  width:100%;
+  height:100%;
+  font: 25px 'roboto_condensedregular', Arial, sans-serif;
+  color: #000;
+}
+
+html {
+  width:100%;
+  height:100%;
+}
+
+img {
+  border:none;
+  max-width: 100%;
+    height: auto;
+}
+
+
+.title{
+  color: #0c1674;
+  background-color: #f4f4f4;
+  padding: 60px;
+  font-size:70px;
+  text-align: center;
+}
+
+.header {
+  height: 138px;
+  background-color: #f4f4f4;
+  color: #0c1674;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header a {
+ font-size: 30px;
+ color: #0c1674;
+}
+
+.header a:hover {
+  font-size: 35px;
+  transition: .5s;
+  color: #0b0f33;
+ }
+
+ .logo {
+  display: block;
+  margin: auto;
+  width: 50%;
+ }
+
+ .menu {
+  height: 138px;
+  color: #0c1674;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.menu a {
+  padding: 30px;
+  width: 30%;
+  margin: 10% auto;
+  border-radius: 30px;
+  background: #f4f4f4;
+ font-size: 25px;
+ color: #0c1674;
+}
+
+.menu a:hover {
+  width: 40%;
+  margin: auto;
+  font-size: 35px;
+  transition: .5s;
+  color: #0b0f33;
+ }
+
+ label{
+   font-size: 20px;
+   color: #0b0f33;
+   padding: 5px
+ }
+
+
+footer {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 45px 0px 45px 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%
+}
+
+.Form {
+  /* width: 100%; */
+  text-align: right;
+  padding: 30px 50% 30px 10%
+}
+
+
+.fieldForm {
+  border: 1px solid #b9b9b9;
+  color: #777777;
+  padding: 12px 10px;
+  font: 30px;
+  margin-bottom: 10px;
+  width: 70%;
+  max-width: 400px;
+}
+
+.send {
+  background-position: top center;
+  background-color: #0b0f33;
+  width: 105px;
+  height: 40px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 20px
+}
