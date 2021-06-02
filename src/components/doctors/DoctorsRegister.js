@@ -27,7 +27,17 @@ function DoctorsRegister() {
           <input
             className="fieldForm"
             type="text"
-            name="surmane"
+            name="surname"
+            required
+          />
+        </div>
+
+        <div className="field">
+          <label htmlFor="procedure">Procedimento</label>
+          <input
+            className="fieldForm"
+            type="text"
+            name="procedure"
             required
           />
         </div>

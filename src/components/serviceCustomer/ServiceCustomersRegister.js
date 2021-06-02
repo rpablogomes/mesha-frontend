@@ -10,24 +10,24 @@ function DoctorsRegister() {
       <form
         className="Form"
         method="POST"
-        action="http://localhost:8080/doctors"
+        action="http://localhost:8080/customerServices"
       >
         <div className="field">
           <label htmlFor="name">Nome</label>
           <input
             className="fieldForm"
             type="text"
-            name="name"
+            name="user"
             required
           />
         </div>
 
         <div className="field">
-          <label htmlFor="surname">Procedimentos</label>
+          <label htmlFor="procedures">Procedimentos</label>
           <input
             className="fieldForm"
             type="text"
-            name="surmane"
+            name="procedures"
             required
           />
         </div>
@@ -35,7 +35,6 @@ function DoctorsRegister() {
             className="send"
             type="submit"
             id="button"
-            value="Enviar"
           >Salvar</button>
       </form>
       <Footer />

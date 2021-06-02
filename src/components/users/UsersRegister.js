@@ -21,9 +21,8 @@ function UsersRegister() {
             required
           />
         </div>
-
         <div className="field">
-          <label htmlFor="surname">Sobrenome</label>
+          <label htmlFor="name">Sobrenome</label>
           <input
             className="fieldForm"
             type="text"
@@ -34,8 +33,6 @@ function UsersRegister() {
         <button
             className="send"
             type="submit"
-            id="button"
-            value="Enviar"
           >Salvar</button>
       </form>
       <Footer />
