@@ -26,7 +26,15 @@ function ProcedureList() {
         <tr>
           <th classname="tableName">Nome</th>
           <th classname="tableName">Sobrenome</th>
+          <th classname="tableName">Procedimento</th>
         </tr>
+        {/* Table goes here 
+        <tr>
+          <td>Nome</td>
+          <td>Sobrenome</td>
+          <th>Procedimento</th>
+        </tr>
+        */}
       </table>
       </div>
       <Footer />

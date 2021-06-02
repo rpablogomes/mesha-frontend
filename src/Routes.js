@@ -15,6 +15,10 @@ import Procedures from "./components/procedures/Procedures"
 import ProceduresRegister from "./components/procedures/ProceduresRegister"
 import ProceduresList from "./components/procedures/ProceduresList"
 
+import ServiceCustomers from "./components/serviceCustomer/ServiceCustomers"
+import ServiceCustomersRegister from "./components/serviceCustomer/ServiceCustomersRegister"
+import ServiceCustomersList from "./components/serviceCustomer/ServiceCustomersList"
+
 
 function Routes() {
  
@@ -33,6 +37,10 @@ function Routes() {
         <Route exact path="/procedures" component={Procedures} />
         <Route path="/procedures/register" component={ProceduresRegister} />
         <Route path="/Procedures/list" component={ProceduresList} />
+
+        <Route exact path="/serviceCustomers" component={ServiceCustomers} />
+        <Route path="/serviceCustomers/register" component={ServiceCustomersRegister} />
+        <Route path="/serviceCustomers/list" component={ServiceCustomersList} />
       </Switch>
     );
   }
