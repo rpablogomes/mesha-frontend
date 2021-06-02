@@ -98,7 +98,6 @@ footer {
 }
 
 .Form {
-  /* width: 100%; */
   text-align: right;
   padding: 30px 50% 30px 10%
 }
@@ -122,4 +121,30 @@ footer {
   cursor: pointer;
   color: #FFF;
   font-size: 20px
+}
+
+.table{
+  margin: auto;
+  width: 20%;
+}
+
+.Search{
+  display:grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 10%;
+  padding: 0 10%
+}
+
+.FormSearch {
+  padding: 10px
+
+}
+
+.fieldFormSearch {
+  border: 1px solid #b9b9b9;
+  color: #777777;
+  padding: 12px 10px;
+  font: 30px;
+  margin-bottom: 10px;
+  width: 100%;
 }
