@@ -19,21 +19,21 @@ export default function ContainedButtons() {
   return (
     <>
       <Header />
-      <div className={classes.root}>
-        <a className="menu" href="/users/register">
-          <Button variant="contained" color="primary">
-            Cadastrar <br /> Usuário
-          </Button>
-        </a>
-        <a className="menu" href="/users/list">
-          <Button variant="contained" color="primary">
-            Buscar
-            <br />
-            Usuário
-          </Button>
-        </a>
-      </div>
+    <div className={classes.root}>
+      <a className="menu" href="/customerServices/register">
+      <Button variant="contained" color="primary">
+        Cadastrar <br /> Atendimento
+      </Button>
+      </a>
+      <a className="menu" href="/customerServices/list">
+      <Button variant="contained" color="primary">
+        Buscar
+        <br />
+        Atendimento
+      </Button>
+      </a>
+    </div>
       <Footer />
-    </>
+      </>
   );
 }

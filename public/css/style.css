@@ -29,25 +29,6 @@ img {
   text-align: center;
 }
 
-.header {
-  height: 138px;
-  background-color: #f4f4f4;
-  color: #0c1674;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.header a {
- font-size: 30px;
- color: #0c1674;
-}
-
-.header a:hover {
-  font-size: 35px;
-  transition: .5s;
-  color: #0b0f33;
- }
 
  .logo {
   display: block;
@@ -58,23 +39,13 @@ img {
  .menu {
   height: 138px;
   color: #0c1674;
-  text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 0 30%;
+  margin: auto;
 }
 
-.menu a {
-  padding: 30px;
-  width: 30%;
-  margin: 10% auto;
-  border-radius: 30px;
-  background: #f4f4f4;
- font-size: 25px;
- color: #0c1674;
-}
+.menu:hover {
 
-.menu a:hover {
-  width: 40%;
   margin: auto;
   font-size: 35px;
   transition: .5s;
@@ -88,13 +59,14 @@ img {
  }
 
 
-footer {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding: 45px 0px 45px 0px;
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%
+}
+
+.footerText{
+  margin: auto;
 }
 
 .Form {
@@ -130,14 +102,16 @@ footer {
 
 .Search{
   display:grid;
-  grid-template-columns: 40% 40%;
-  column-gap: 10%;
-  padding: 0 10%
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  gap: 10%;
+  padding: 10%
 }
 
 .FormSearch {
-  padding: 10px
-
+  padding: 120px;
+  margin: auto;
+  width: 30px
 }
 
 .fieldFormSearch {

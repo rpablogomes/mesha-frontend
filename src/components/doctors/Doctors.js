@@ -1,29 +1,39 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
 import Header from "../Header";
 import Footer from "../Footer";
 
-function Doctors() {
-  return (
-    <div>
-      <Header />
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+}));
 
-      <div class="menu">
-        <a class="links" href="/doctors/register">
-          Cadastrar
-          <br />
-          Doutor
+export default function ContainedButtons() {
+  const classes = useStyles();
+
+  return (
+    <>
+      <Header />
+      <div className={classes.root}>
+        <a className="menu" href="/doctors/register">
+          <Button variant="contained" color="primary">
+            Cadastrar <br /> Doutor
+          </Button>
         </a>
-        <a class="links" href="/doctors/list">
-          Buscar
-          <br />
-          Doutores
+        <a className="menu" href="/doctors/list">
+          <Button variant="contained" color="primary">
+            Buscar
+            <br />
+            Doutores
+          </Button>
         </a>
       </div>
-
       <Footer />
-    </div>
+    </>
   );
 }
-
-export default Doctors;
