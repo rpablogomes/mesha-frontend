@@ -18,6 +18,9 @@ import ProceduresList from "./components/procedures/ProceduresList"
 import CustomerServices from "./components/customerServices/CustomerServices"
 import CustomerServicesRegister from "./components/customerServices/CustomerServicesRegister"
 import CustomerServicesList from "./components/customerServices/CustomerServicesList"
+import CustomerServicesForm from "./components/customerServices/CustomerServicesForm"
+
+
 
 
 function Routes() {
@@ -38,9 +41,10 @@ function Routes() {
         <Route path="/procedures/register" component={ProceduresRegister} />
         <Route path="/Procedures/list" component={ProceduresList} />
 
-        <Route exact path="/CustomerServices" component={CustomerServices} />
-        <Route path="/CustomerServices/register" component={CustomerServicesRegister} />
-        <Route path="/CustomerServices/list" component={CustomerServicesList} />
+        <Route exact path="/customerServices" component={CustomerServices} />
+        <Route path="/customerServices/register" component={CustomerServicesRegister} />
+        <Route path="/customerServices/list" component={CustomerServicesList} />
+        <Route path="/customerServices/:id" component={CustomerServicesForm} />
       </Switch>
     );
   }

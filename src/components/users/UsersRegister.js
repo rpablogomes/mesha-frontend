@@ -7,33 +7,18 @@ function UsersRegister() {
   return (
     <>
       <Header />
-      <form
-        className="Form"
-        method="POST"
-        action="http://localhost:8080/users"
-      >
+      <form className="Form" method="POST" action="http://localhost:8080/users">
+        <label htmlFor="name">Nome</label>
         <div className="field">
-          <label htmlFor="name">Nome</label>
-          <input
-            className="fieldForm"
-            type="text"
-            name="name"
-            required
-          />
+          <input className="fieldForm" type="text" name="name" required />
         </div>
+        <label htmlFor="name">Sobrenome</label>
         <div className="field">
-          <label htmlFor="name">Sobrenome</label>
-          <input
-            className="fieldForm"
-            type="text"
-            name="surname"
-            required
-          />
+          <input className="fieldForm" type="text" name="surname" required />
         </div>
-        <button
-            className="send"
-            type="submit"
-          >Salvar</button>
+        <button className="send" type="submit">
+          Salvar
+        </button>
       </form>
       <Footer />
     </>
