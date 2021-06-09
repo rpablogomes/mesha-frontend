@@ -12,41 +12,18 @@ function DoctorsRegister() {
         method="POST"
         action="http://localhost:8080/doctors"
       >
+        <label htmlFor="name">Nome</label>
         <div className="field">
-          <label htmlFor="name">Nome</label>
-          <input
-            className="fieldForm"
-            type="text"
-            name="name"
-            required
-          />
+          <input className="fieldForm" type="text" name="name" required />
         </div>
 
+        <label htmlFor="surname">Sobrenome</label>
         <div className="field">
-          <label htmlFor="surname">Sobrenome</label>
-          <input
-            className="fieldForm"
-            type="text"
-            name="surname"
-            required
-          />
+          <input className="fieldForm" type="text" name="surname" required />
         </div>
-
-        <div className="field">
-          <label htmlFor="procedure">Procedimento</label>
-          <input
-            className="fieldForm"
-            type="text"
-            name="procedure"
-            required
-          />
-        </div>
-        <button
-            className="send"
-            type="submit"
-            id="button"
-            value="Enviar"
-          >Salvar</button>
+        <button className="send" type="submit" id="button" value="Enviar">
+          Salvar
+        </button>
       </form>
       <Footer />
     </>

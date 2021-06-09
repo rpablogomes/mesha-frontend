@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "../Header";
 import Footer from "../Footer";
 
+const axios = require("axios");
+
 function UsersRegister() {
+  const [doctors, setDoctors] = useState([]);
+
+  function getDoctors() {
+    axios.get("http://localhost:8080/doctors").then((response) => {
+      setDoctors(response.data.body);
+    });
+  }
+
+  useEffect(() => {
+    getDoctors();
+  }, []);
+
   return (
     <>
       <Header />
@@ -12,13 +26,13 @@ function UsersRegister() {
         method="POST"
         action="http://localhost:8080/procedures"
       >
+        <label htmlFor="name">Nome</label>
         <div className="field">
-          <label htmlFor="name">Nome</label>
           <input className="fieldForm" type="text" name="name" required />
         </div>
 
+        <label htmlFor="surname">Descrição</label>
         <div className="field">
-          <label htmlFor="surname">descrição</label>
           <input
             className="fieldForm"
             type="text"
@@ -26,8 +40,25 @@ function UsersRegister() {
             required
           />
         </div>
+        <label htmlFor="user">Doutor</label>
         <div className="field">
-          <label htmlFor="value">Valor</label>
+          <select
+            className="fieldForm"
+            style={{ width: 422 }}
+            type="text"
+            name="doctorId"
+            required
+          >
+            <option hidden />
+            {doctors.map((doctor) => (
+              <option value={doctor.id}>
+                {doctor.name} {doctor.surname}
+              </option>
+            ))}
+          </select>
+        </div>
+        <label htmlFor="value">Valor</label>
+        <div className="field">
           <input
             className="fieldForm"
             name="value"

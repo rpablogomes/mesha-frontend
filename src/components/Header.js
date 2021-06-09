@@ -43,12 +43,12 @@ function a11yProps(index) {
 }
 
 function LinkTab(props) {
-const history = useHistory();
+  const history = useHistory();
   return (
     <Tab
       component="a"
       onClick={(event) => {
-        history.push(props.to)
+        history.push(props.to);
         event.preventDefault();
       }}
       {...props}
@@ -68,23 +68,25 @@ export default function NavTabs() {
   const tabs = [
     {
       label: "Atendimentos",
-      route: "/customerServices"
+      route: "/customerServices",
     },
     {
       label: "Usuários",
-      route: "/users"
+      route: "/users",
     },
     {
       label: "Doutores",
-      route: "/doctors"
+      route: "/doctors",
     },
     {
       label: "Procedimentos",
-      route: "/procedures"
+      route: "/procedures",
     },
-  ]
-  const location = useLocation()
-  const currentIndex = tabs.findIndex(tab => location.pathname.includes(tab.route))
+  ];
+  const location = useLocation();
+  const currentIndex = tabs.findIndex((tab) =>
+    location.pathname.includes(tab.route)
+  );
 
   const [value, setValue] = React.useState(currentIndex);
 
@@ -102,8 +104,13 @@ export default function NavTabs() {
           aria-label="nav tabs example"
         >
           {tabs.map((tab, index) => (
-          <LinkTab label={tab.label} to={tab.route} key={tab.label + index} {...a11yProps(index)} />
-        ))}
+            <LinkTab
+              label={tab.label}
+              to={tab.route}
+              key={tab.label + index}
+              {...a11yProps(index)}
+            />
+          ))}
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
