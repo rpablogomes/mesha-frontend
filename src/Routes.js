@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 
 import App from "./components/App";
 
@@ -15,9 +15,9 @@ import Procedures from "./components/procedures/Procedures"
 import ProceduresRegister from "./components/procedures/ProceduresRegister"
 import ProceduresList from "./components/procedures/ProceduresList"
 
-import ServiceCustomers from "./components/serviceCustomer/ServiceCustomers"
-import ServiceCustomersRegister from "./components/serviceCustomer/ServiceCustomersRegister"
-import ServiceCustomersList from "./components/serviceCustomer/ServiceCustomersList"
+import CustomerServices from "./components/customerServices/CustomerServices"
+import CustomerServicesRegister from "./components/customerServices/CustomerServicesRegister"
+import CustomerServicesList from "./components/customerServices/CustomerServicesList"
 
 
 function Routes() {
@@ -38,9 +38,9 @@ function Routes() {
         <Route path="/procedures/register" component={ProceduresRegister} />
         <Route path="/Procedures/list" component={ProceduresList} />
 
-        <Route exact path="/serviceCustomers" component={ServiceCustomers} />
-        <Route path="/serviceCustomers/register" component={ServiceCustomersRegister} />
-        <Route path="/serviceCustomers/list" component={ServiceCustomersList} />
+        <Route exact path="/CustomerServices" component={CustomerServices} />
+        <Route path="/CustomerServices/register" component={CustomerServicesRegister} />
+        <Route path="/CustomerServices/list" component={CustomerServicesList} />
       </Switch>
     );
   }

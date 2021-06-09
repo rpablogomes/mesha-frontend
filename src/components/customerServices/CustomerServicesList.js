@@ -41,23 +41,23 @@ const useStyles = makeStyles((theme) => ({
 export default function LayoutTextFields() {
   const classes = useStyles();
 
-  // const [procedures, setprocedures] = useState([])
+  // const [customerServices, setCustomerServices] = useState([])
 
-  // function getprocedures(){
-  //   axios.get("http://localhost:8080/procedures").then(data => {
+  // function getCustomerServices(){
+  //   axios.get("http://localhost:8080/customerServices").then(data => {
   //   console.log(data)
   //   })
   // }
 
   // useEffect(() => {
-  //   getprocedures()
+  //   getcustomerServices()
     
   // });
 
-  const procedures = [
-    {procedure: "Massagem", description: "Massagem para relaxar", valor: 300},
-    {procedure: "Odontologia", description: "Cuidado com os dentes", valor: 400},
-    {procedure: "Nutrição", description: "Alimentação personalizada", valor: 200},
+  const customerServices = [
+    {id: 1, user: "Pablo Gomes", procedures: "odontologia"},
+    {id: 2, user: "Fernando Dias", procedures: "nutricionista"},
+    {id: 3, user: "João Silva", procedures: "terapia"},
   ]
 
   return (
@@ -82,20 +82,20 @@ export default function LayoutTextFields() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Procedimento</TableCell>
-            <TableCell align="middle">Descrição</TableCell>
-            <TableCell align="middle">Valor</TableCell>
+            <TableCell>id</TableCell>
+            <TableCell align="middle">Users</TableCell>
+            <TableCell align="middle">Procedure</TableCell>
     
           </TableRow>
         </TableHead>
         <TableBody>
-          {procedures.map((procedure) => (
-            <TableRow key={procedure.procedure}>
+          {customerServices.map((customerService) => (
+            <TableRow key={customerService.customerService}>
               <TableCell component="th" scope="row">
-                {procedure.procedure}
+                {customerService.id}
               </TableCell>
-              <TableCell align="middle">{procedure.description}</TableCell>
-              <TableCell align="middle">{procedure.valor}</TableCell>
+              <TableCell align="middle">{customerService.user}</TableCell>
+              <TableCell align="middle">{customerService.procedures}</TableCell>
             </TableRow>
           ))}
         </TableBody>

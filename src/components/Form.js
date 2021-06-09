@@ -41,23 +41,23 @@ const useStyles = makeStyles((theme) => ({
 export default function LayoutTextFields() {
   const classes = useStyles();
 
-  // const [procedures, setprocedures] = useState([])
+  // const [users, setusers] = useState([])
 
-  // function getprocedures(){
-  //   axios.get("http://localhost:8080/procedures").then(data => {
+  // function getusers(){
+  //   axios.get("http://localhost:8080/users").then(data => {
   //   console.log(data)
   //   })
   // }
 
   // useEffect(() => {
-  //   getprocedures()
+  //   getusers()
     
   // });
 
-  const procedures = [
-    {procedure: "Massagem", description: "Massagem para relaxar", valor: 300},
-    {procedure: "Odontologia", description: "Cuidado com os dentes", valor: 400},
-    {procedure: "Nutrição", description: "Alimentação personalizada", valor: 200},
+  const users = [
+    {name: "Pablo", surname: "Gomes"},
+    {name: "João", surname: "Silva"},
+    {name: "Pedro", surname: "Sousa"}
   ]
 
   return (
@@ -78,24 +78,22 @@ export default function LayoutTextFields() {
             }}
           />
           </div>
-          <TableContainer className="table" component={Paper}>
+          <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Procedimento</TableCell>
-            <TableCell align="middle">Descrição</TableCell>
-            <TableCell align="middle">Valor</TableCell>
+            <TableCell >Nome</TableCell>
+            <TableCell align="middle">Sobrenome</TableCell>
     
           </TableRow>
         </TableHead>
         <TableBody>
-          {procedures.map((procedure) => (
-            <TableRow key={procedure.procedure}>
+          {users.map((user) => (
+            <TableRow key={user.name}>
               <TableCell component="th" scope="row">
-                {procedure.procedure}
+                {user.name}
               </TableCell>
-              <TableCell align="middle">{procedure.description}</TableCell>
-              <TableCell align="middle">{procedure.valor}</TableCell>
+              <TableCell align="middle">{user.surname}</TableCell>
             </TableRow>
           ))}
         </TableBody>
